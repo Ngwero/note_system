@@ -1,0 +1,257 @@
+/* Container for the entire note page */
+.note-page {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Styling for the "New Note" button */
+.new-note-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.new-note-btn:hover {
+    background-color: #45a049;
+}
+
+/* Grid layout for the notes */
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns layout */
+    gap: 20px;
+}
+
+/* Styling for each individual note */
+.note {
+    background-color: #FFD700; /* Yellow goldish background */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Darker shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Adding hover effect for better interactivity */
+.note:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Even darker shadow on hover */
+}
+
+/* Styling for the note body text */
+.note-body {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Container for the buttons within each note */
+.note-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Styling for the note buttons */
+.note-buttons a {
+    background-color: #007BFF;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.note-view-button:hover {
+    background-color: #0069d9;
+}
+
+.note-edit-button {
+    background-color: #28a745;
+}
+
+.note-edit-button:hover {
+    background-color: #218838;
+}
+
+.note-delete-button {
+    background-color: #DC3545;
+}
+
+.note-delete-button:hover {
+    background-color: #c82333;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 900px) {
+    .notes-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .notes-grid {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+    }
+}
+
+
+/* Base styling for the layout */
+.show-note-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+.note-header {
+    margin-bottom: 20px;
+}
+
+.note-buttons {
+    margin-bottom: 20px;
+}
+
+.note-edit-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.note-edit-button:hover {
+    background-color: #0056b3;
+}
+
+.note-delete-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.note-delete-button:hover {
+    background-color: #c82333;
+}
+
+.note {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.note-body {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+/* Container for the edit note form */
+.edit-note-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+h2 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.edit-note-form {
+    display: flex;
+    flex-direction: column;
+}
+
+textarea.note-body {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    resize: vertical; /* Allow resizing only vertically */
+    margin-bottom: 20px;
+}
+
+textarea.note-body:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-save {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-save:hover {
+    background-color: #0056b3;
+}
+
+.btn-cancel {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-cancel:hover {
+    background-color: #5a6268;
+}
